@@ -1,0 +1,382 @@
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .how-it-works h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--primary);
+  }
+  
+  .how-it-works ol {
+    list-style-position: inside;
+    counter-reset: item;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .how-it-works li {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    counter-increment: item;
+    position: relative;
+  }
+  
+  .how-it-works li::before {
+    content: counter(item);
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .how-it-works h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    position: relative;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+  }
+  
+  .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+  }
+  
+  .cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+  }
+  
+  .price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+  }
+  
+  .feature-card ul {
+    text-align: left;
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+  
+  .feature-card li {
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .how-it-works ol {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  /* Stock Prediction Section */
+.prediction-section {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  margin: 2rem 0;
+}
+
+.prediction-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.prediction-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.form-container, .chart-container {
+  padding: 2rem;
+}
+
+.form-container h3, .chart-container h3 {
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.chart-container {
+  border-left: 1px solid #eee;
+  min-height: 400px;
+}
+
+.error-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.prediction-result {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background-color: #e3f2fd;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.prediction-result h4 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.prediction-result p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .prediction-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-container {
+    border-left: none;
+    border-top: 1px solid #eee;
+  }
+}
+/* Stock Prediction Section */
+.prediction-section {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.prediction-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.form-container, .chart-container {
+  padding: 2rem;
+}
+
+.form-container h3, .chart-container h3 {
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.chart-container {
+  border-left: 1px solid #eee;
+  min-height: 400px;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.no-data-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #888;
+}
+
+.error-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 4px;
+}
+
+.prediction-result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #e3f2fd;
+  border-radius: 4px;
+}
+
+.prediction-result h4 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .prediction-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-container {
+    border-left: none;
+    border-top: 1px solid #eee;
+  }
+}
+/* QR Code Modal */
+.qr-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.qr-modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+.qr-image {
+  max-width: 200px;
+  margin: 1.5rem auto;
+  display: block;
+}
